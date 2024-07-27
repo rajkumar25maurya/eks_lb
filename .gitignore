@@ -1,0 +1,26 @@
+# Ignore Terraform directories and state files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.git
+.git
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log
+
+# Ignore compiled files
+*.class
+*.o
+*.so
+*.exe
+
+# Ignore IDE directories
+.vscode/
+.idea/
+
+# Ignore node modules
+node_modules/
