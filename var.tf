@@ -73,3 +73,12 @@ variable "endpoint_private_access" {
 variable "endpoint_public_access" {
   type = bool
 }
+
+variable "security_group" {}
+
+variable "autoscaler_policy" {
+}
+
+variable "eks_policy" {
+  
+}

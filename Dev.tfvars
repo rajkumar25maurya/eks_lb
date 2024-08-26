@@ -17,3 +17,6 @@ force_update_version    = false
 capacity_type           = "ON_DEMAND"
 endpoint_private_access = false
 endpoint_public_access  = true
+security_group          = "Dev-Raj-genie-eks-access"
+autoscaler_policy       = "dev_genie_eks_autoscaler_policy"
+eks_policy              = "dev_genie_eks_policy"

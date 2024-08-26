@@ -1,13 +1,21 @@
 apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: alb
+spec:
+  controller: ingress.k8s.aws/alb
+
+---
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: raj-ns
   name: raj-ingress
+  namespace: raj-ns
   annotations:
-    alb.ingress.kubernetes.io/listen-ports:  '{"HTTP":80}'
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/subnets: subnet-391b9652,subnet-7113313d,subnet-1241ba6f
 spec:
   ingressClassName: alb
   rules:
@@ -21,4 +29,3 @@ spec:
             name: raj-svc
             port:
               number: 80
-          

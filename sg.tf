@@ -1,10 +1,7 @@
 resource "aws_security_group" "main" {
-  name   = "Dev-Raj-genie-eks-access"
+  name   = var.security_group
   vpc_id = data.aws_vpc.main.id
-  tags = {
-    "kubernetes.io/cluster/Raj-Dev" = "shared"
   }
-}
 
 resource "aws_security_group_rule" "allow_outbound_all" {
   security_group_id = aws_security_group.main.id

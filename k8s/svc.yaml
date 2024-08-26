@@ -12,7 +12,3 @@ spec:
     port: 80
     targetPort: 80
     protocol: TCP
-  # - name: https
-  #   port: 443
-  #   targetPort: ${container_http_port}
-  #   protocol: TCP

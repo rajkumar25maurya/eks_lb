@@ -2,30 +2,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: raj-deployment
+  namespace: raj-ns
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: raj-dev
   template:
     metadata:
       labels:
-        app: nginx
+        app: raj-dev
     spec:
       containers:
       - name: nginx
         image: nginx
         resources:
           requests:
-            cpu: "2"
-            memory: 4Gi
+            cpu: "1"
+            memory: 2Gi
         ports:
         - containerPort: 80
-      # tolerations:
-      # - key: "workload-type/golang"
-      #   operator: "Equal"
-      #   value: "true"
-      #   effect: "NoSchedule"
