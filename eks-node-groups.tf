@@ -276,6 +276,15 @@ resource "aws_iam_policy" "policy" {
                 "elasticloadbalancing:ModifyRule"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "elasticfilesystem:DescribeFileSystems",
+                "elasticfilesystem:DescribeMountTargets",
+                "elasticfilesystem:DescribeMountTargetSecurityGroups"
+            ],
+            "Resource": "*"
         }
     ]
   })

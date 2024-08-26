@@ -20,3 +20,6 @@ endpoint_public_access  = true
 security_group          = "Dev-Raj-genie-eks-access"
 autoscaler_policy       = "dev_genie_eks_autoscaler_policy"
 eks_policy              = "dev_genie_eks_policy"
+efs_token              = "terraform-efs-raj"
+efs_name                = "RajEFS"
+efs_sg                  = "efs-security-group"

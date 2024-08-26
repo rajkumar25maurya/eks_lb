@@ -82,3 +82,15 @@ variable "autoscaler_policy" {
 variable "eks_policy" {
   
 }
+
+variable "efs_token" {
+  
+}
+
+variable "efs_name" {
+  
+}
+
+variable "efs_sg" {
+  
+}
