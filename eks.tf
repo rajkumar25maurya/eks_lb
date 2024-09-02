@@ -25,12 +25,12 @@ resource "aws_eks_cluster" "eks" {
   name     = var.eks_cluster_name
   role_arn = aws_iam_role.eks_cluster.arn
   version  = var.eks_version
-  
+
 
   vpc_config {
     endpoint_private_access = var.endpoint_private_access
     endpoint_public_access  = var.endpoint_public_access
-    subnet_ids              = data.aws_subnets.main.ids
+    subnet_ids              = var.subnets_id
 
   }
   depends_on = [
