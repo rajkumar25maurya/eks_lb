@@ -22,7 +22,7 @@ module "eks-prod" {
   security_group          = "infra-platform-eks-access"
   autoscaler_policy       = "infra-platform_eks_autoscaler_policy"
   eks_policy              = "infra-platform_eks_policy"
-  subnets                 = data.aws_subnets.main.ids
+  subnets_id              = data.aws_subnets.main.ids
 }
 
 data "aws_vpc" "main" {
