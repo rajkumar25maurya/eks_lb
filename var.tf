@@ -80,17 +80,21 @@ variable "autoscaler_policy" {
 }
 
 variable "eks_policy" {
-  
+
 }
 
-variable "efs_token" {
-  
-}
+# variable "private_subnet_ids" {
+#   description = "Subnet list for private resources"
+#   type        = string
+#   default     = "subnet-057b3bc7ea736edcb,subnet-0cfabc85a1004cb75"
+# }
 
-variable "efs_name" {
-  
-}
+# variable "public_subnet_ids" {
+#   description = "Subnet list for public resources"
+#   type        = string
+#   default     = "subnet-0293137f03713ca67,subnet-0370f9295402c055f"
+# }
 
-variable "efs_sg" {
-  
+variable "subnets_id" {
+  type = list(string)
 }

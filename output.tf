@@ -3,12 +3,12 @@
 
 # }
 
-output "vpc-id" {
-  value = data.aws_vpc.main.id
+# output "vpc-id" {
+#   value = data.aws_vpc.main.id
 
-}
+# }
 
-output "subnets" {
-  value = data.aws_subnets.main.ids
+output "eks_name" {
+  value = aws_eks_cluster.eks.name
 
 }
